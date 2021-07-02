@@ -73,8 +73,12 @@ $('#div2').before('#div1')
 jQuery 中有以下方法来修改元素的属性：
 ````JavaScript
 .attr() //获取匹配的元素集合中的第一个元素的属性的值。设置每一个匹配元素的一个或多个属性
-..prop() //获取匹配的元素集中第一个元素的属性 (property) 值为匹配的元素设置一个或多个属性 (properties)
+.prop() //获取匹配的元素集中第一个元素的属性 (property) 值为匹配的元素设置一个或多个属性 (properties)
 .removeAttr() //为匹配的元素集合中的每个元素中移除一个属性 (attribute)
 .removeProp() //为集合中匹配的元素删除一个属性 (property)
 .val() //获取匹配的元素集合中第一个元素的当前值。设置匹配的元素集合中每个元素的值
 ````
+
+## 引用
+[jQuery中文文档](https://www.jquery123.com/)
+[阮一峰网络日志](http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html)
