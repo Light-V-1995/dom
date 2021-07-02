@@ -393,10 +393,14 @@ window.jQuery = (selectorOrArray)=>{
         },
         find (selector) {
             let array = [];
-            for(let i = 0; i < elements.length; i++)array = array.concat(Array.from(elements[i].querySelectorAll(selector)));
-            // this.each((node) => {
-            //   array = array.concat(Array.from(node.querySelectorAll(selector)));
-            // });
+            // for (let i = 0; i < elements.length; i++) {
+            //   array = array.concat(
+            //     Array.from(elements[i].querySelectorAll(selector))
+            //   );
+            // }
+            this.each((node)=>{
+                array = array.concat(Array.from(node.querySelectorAll(selector)));
+            });
             array.oldApi = this;
             return jQuery(array);
         },

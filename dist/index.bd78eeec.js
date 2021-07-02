@@ -387,6 +387,8 @@ jQuery(".test").find(".red").next().print();
 console.log("-----------");
 jQuery(".test").find(".red").previous().print();
 jQuery(".test").find(".green").previous().previous().print();
+console.log("-----------");
+jQuery(".test").find(".red").find("hh").print();
 
 },{}]},["3lSIl","30Yv7"], "30Yv7", "parcelRequire427e")
 
