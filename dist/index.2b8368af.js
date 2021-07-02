@@ -398,8 +398,11 @@ window.jQuery = (selectorOrArray)=>{
             //     Array.from(elements[i].querySelectorAll(selector))
             //   );
             // }
+            // this.each((node) => {
+            //   array = array.concat(Array.from(node.querySelectorAll(selector)));
+            // });
             this.each((node)=>{
-                array = array.concat(Array.from(node.querySelectorAll(selector)));
+                array.push(...node.querySelectorAll(selector));
             });
             array.oldApi = this;
             return jQuery(array);
