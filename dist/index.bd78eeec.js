@@ -389,6 +389,9 @@ jQuery(".test").find(".red").previous().print();
 jQuery(".test").find(".green").previous().previous().print();
 console.log("-----------");
 jQuery(".test").find(".red").find("hh").print();
+jQuery(".test").on("click", ".green", (e, t)=>{
+    console.log(t.textContent);
+});
 
 },{}]},["3lSIl","30Yv7"], "30Yv7", "parcelRequire427e")
 

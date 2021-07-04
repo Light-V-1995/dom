@@ -470,6 +470,22 @@ window.jQuery = (selectorOrArray)=>{
         print () {
             console.log(elements);
             return this;
+        },
+        on (eventType, selector, fn) {
+            this.each((element)=>{
+                element.addEventListener(eventType, (e)=>{
+                    const t = e.target;
+                    while(!t.matches(selector)){
+                        if (t === element) {
+                            t = null;
+                            break;
+                        }
+                        t = t.parentNode;
+                    }
+                    t && fn.call(t, e, t);
+                });
+            });
+            return this;
         }
     };
 };
